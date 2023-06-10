@@ -1,10 +1,10 @@
 {
-    'name': 'My Module',
+    'name': 'My Test Module',
     'version': '1.0',
     'summary': 'Short module summary',
-    'description': 'Detailed module description',
+    'description': 'Detailed Test module description',
     'category': 'Uncategorized',
-    'author': 'Your Name',
+    'author': 'Thomas Dyer',
     'depends': ['base'],  # Add dependencies if needed
     'data': [
         'security/ir.model.access.csv',

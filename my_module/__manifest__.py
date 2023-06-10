@@ -1,6 +1,6 @@
 {
     'name': 'My Test Module',
-    'version': '1.0',
+    'version': '16.0',
     'summary': 'Short module summary',
     'description': 'Detailed Test module description',
     'category': 'Uncategorized',

@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <!-- Product Form View -->
+        <record id="view_product_form_portal" model="ir.ui.view">
+            <field name="name">product.form.portal</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="website_sale.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website_published']" position="after">
+                    <field name="website_portal_create"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Product Tree View -->
+        <record id="view_product_tree_portal" model="ir.ui.view">
+            <field name="name">product.tree.portal</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="website_sale.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website_published']" position="after">
+                    <field name="website_portal_create"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Product Search View -->
+        <record id="view_product_search_portal" model="ir.ui.view">
+            <field name="name">product.search.portal</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="website_sale.product_template_search_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website_published']" position="after">
+                    <field name="website_portal_create"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Product Form Action -->
+        <record id="action_product_form_portal" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Product Menu Action -->
+        <record id="action_product_menu_portal" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('website_published', '=', True)]</field>
+        </record>
+
+        <!-- Product Menu Item -->
+        <menuitem id="menu_product_portal" name="Products" parent="website.menu_website_configuration" sequence="20"/>
+        <menuitem id="menu_product_list_portal" name="Product List" parent="menu_product_portal" action="action_product_menu_portal" sequence="10"/>
+        <menuitem id="menu_product_create_portal" name="Create Product" parent="menu_product_portal" action="action_product_form_portal" sequence="20"/>
+    </data>
+</odoo>

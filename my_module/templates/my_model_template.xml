@@ -1,8 +1,0 @@
-<template id="my_model_template" inherit_id="website.layout">
-    <t t-call="website.layout">
-        <div class="container">
-            <h1>My Model</h1>
-            <p>Website-specific content goes here</p>
-        </div>
-    </t>
-</template>

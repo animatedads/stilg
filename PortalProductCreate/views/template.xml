@@ -1,5 +1,3 @@
-# views/templates.xml
-
 <odoo>
     <data>
         <!-- Product List Template -->

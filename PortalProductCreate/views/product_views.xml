@@ -1,5 +1,3 @@
-# views/product_views.xml
-
 <odoo>
     <data>
         <!-- Product Form View -->

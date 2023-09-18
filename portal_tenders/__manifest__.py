@@ -2,7 +2,7 @@
 
 {
     'name': 'Tender Management',
-    'version': '1.0',
+    'version': '16.0',
     'summary': 'Module to allow portal users to manage tenders',
     'description': 'This module enables portal users to create tenders and submit bids for tenders.',
     'category': 'Sales',

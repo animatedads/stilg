@@ -1,4 +1,4 @@
-{# __manifest__.py
+# __manifest__.py
 
 {
     'name': 'Portal Product Creation',
@@ -7,7 +7,7 @@
     'description': 'This module enables portal users to add new products with relevant details.',
     'category': 'Website',
     'author': 'Thomas Dyer',
-    'website': 'https://www.example.com',
+    'website': 'https://www.allservices.cy',
     'depends': ['website_sale'],
     'data': [
         'security/ir.model.access.csv',

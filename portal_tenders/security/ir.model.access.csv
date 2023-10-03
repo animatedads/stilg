@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_tender_manager,tender.manager,model_tender_manager,base.group_user,1,1,1,1
-access_tender_user,tender.user,model_tender_user,base.group_user,1,1,1,0
-access_bid_user,bid.user,model_bid_user,base.group_user,1,1,1,0

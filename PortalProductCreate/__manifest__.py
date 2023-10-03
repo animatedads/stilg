@@ -8,7 +8,7 @@
     'category': 'Website',
     'author': 'Thomas Dyer',
     'website': 'https://www.allservices.cy',
-    'depends': ['website_sale','products'],
+    'depends': ['website_sale','product'],
     'data': [
         'views/product_views.xml',
     ],

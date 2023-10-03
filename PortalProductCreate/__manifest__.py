@@ -2,7 +2,7 @@
 
 {
     'name': 'Portal Product Creation',
-    'version': '16.1',
+    'version': '16.11',
     'summary': 'Allows portal users to create products on the Odoo online shop',
     'description': 'This module enables portal users to add new products with relevant details.',
     'category': 'Website',

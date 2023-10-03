@@ -1,59 +1,34 @@
 <odoo>
     <data>
-        <!-- Product Form View -->
+        <!-- Define the view -->
         <record id="view_product_form_portal" model="ir.ui.view">
             <field name="name">product.form.portal</field>
             <field name="model">product.template</field>
-            <field name="inherit_id" ref="website_sale.product_template_form_view"/>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='website_published']" position="after">
-                    <field name="website_portal_create"/>
-                </xpath>
+                <form string="Product" version="7.0">
+                    <!-- Add your custom fields here -->
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <!-- Add more fields as needed -->
+                        </group>
+                    </sheet>
+                </form>
             </field>
         </record>
 
-        <!-- Product Tree View -->
-        <record id="view_product_tree_portal" model="ir.ui.view">
-            <field name="name">product.tree.portal</field>
-            <field name="model">product.template</field>
-            <field name="inherit_id" ref="website_sale.product_template_tree_view"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='website_published']" position="after">
-                    <field name="website_portal_create"/>
-                </xpath>
-            </field>
-        </record>
-
-        <!-- Product Search View -->
-        <record id="view_product_search_portal" model="ir.ui.view">
-            <field name="name">product.search.portal</field>
-            <field name="model">product.template</field>
-            <field name="inherit_id" ref="website_sale.product_template_search_view"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='website_published']" position="after">
-                    <field name="website_portal_create"/>
-                </xpath>
-            </field>
-        </record>
-
-        <!-- Product Form Action -->
+        <!-- Define the action -->
         <record id="action_product_form_portal" model="ir.actions.act_window">
-            <field name="name">Products</field>
+            <field name="name">Create Product</field>
             <field name="res_model">product.template</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_product_form_portal"/>
+            <field name="target">new</field>
         </record>
 
-        <!-- Product Menu Action -->
-        <record id="action_product_menu_portal" model="ir.actions.act_window">
-            <field name="name">Products</field>
-            <field name="res_model">product.template</field>
-            <field name="view_mode">tree,form</field>
-            <field name="domain">[('website_published', '=', True)]</field>
-        </record>
-
-        <!-- Product Menu Item -->
-        <menuitem id="menu_product_portal" name="Products" parent="website.menu_website_configuration" sequence="20"/>
-        <menuitem id="menu_product_list_portal" name="Product List" parent="menu_product_portal" action="action_product_menu_portal" sequence="10"/>
-        <menuitem id="menu_product_create_portal" name="Create Product" parent="menu_product_portal" action="action_product_form_portal" sequence="20"/>
+        <!-- Define the menu item -->
+        <menuitem id="menu_product_form_portal" name="Create Product" parent="base.menu_portal_root" action="action_product_form_portal"/>
     </data>
 </odoo>
